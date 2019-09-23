@@ -22,7 +22,7 @@ namespace TODO_APP
             Console.WriteLine("\nCommand Line Todo application");
             Console.WriteLine("=============================\n");
             Console.WriteLine("Command line arguments:");
-           
+
             for (int i = 0; i < arguments.Length; i++)
             {
                 Console.WriteLine("\t" + arguments[i]);
@@ -31,9 +31,16 @@ namespace TODO_APP
 
         public void ListTasks()
         {
-            for (int i = 0; i < ToDoList.Length; i++)
+            if (!(ToDoList.Length > 0))
             {
-                Console.WriteLine((i + 1) + " - " + ToDoList[i]);
+                Console.WriteLine("No todos for today! :)");
+            }
+            else
+            {
+                for (int i = 0; i < ToDoList.Length; i++)
+                {
+                    Console.WriteLine((i + 1) + " - " + ToDoList[i]);
+                }
             }
         }
     }
