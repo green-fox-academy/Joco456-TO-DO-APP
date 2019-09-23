@@ -28,6 +28,11 @@ namespace TODO_APP
             {
                 taskHandler.AddTask(args[1]);
             }
+
+            else if (args[0] == "-c")
+            {
+                print.CheckTask(Convert.ToInt32(args[1]));
+            }
         }
     }
 }

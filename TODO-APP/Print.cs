@@ -43,5 +43,10 @@ namespace TODO_APP
                 }
             }
         }
+
+        public void CheckTask(int index)
+        {
+            Console.WriteLine("The task Nr. " + index + " is: " + ToDoList[index - 1]);
+        }
     }
 }
