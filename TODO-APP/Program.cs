@@ -10,11 +10,18 @@ namespace TODO_APP
     {
         static void Main(string[] args)
         {
+            var print = new Print();
+
             if (args.Length == 0)
             {
-                var print = new Print();
+                
                 print.WithoutArgument();
-            }         
+            }
+
+            if (args.Contains("-l"))
+            {
+                print.ListTasks();
+            }
         }
     }
 }
