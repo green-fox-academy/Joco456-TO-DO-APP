@@ -10,9 +10,11 @@ namespace TODO_APP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Joco");
-            Console.ReadKey();
-         
+            if (args.Length == 0)
+            {
+                var print = new Print();
+                print.WithoutArgument();
+            }         
         }
     }
 }
