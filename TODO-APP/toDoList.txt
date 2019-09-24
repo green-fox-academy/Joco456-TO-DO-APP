@@ -1,3 +1,2 @@
-Walk the dog
-Buy milk
-Do homework
+[ ] Task1
+[X] Task2

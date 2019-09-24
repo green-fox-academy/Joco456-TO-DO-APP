@@ -9,13 +9,13 @@ namespace TODO_APP
 {
     class Print
     {
-        protected string[] arguments = {
+        private string[] arguments = {
             "-l   Lists all the tasks",
             "-a   Adds a new task",
             "-r   Removes a task",
             "-c   Completes a task" };
 
-        protected string[] ToDoList = File.ReadAllLines(@"D:\C#\Joco456-TO-DO-APP\TODO-APP\toDoList.txt");
+        private string[] ToDoList = File.ReadAllLines(@"D:\C#\Joco456-TO-DO-APP\TODO-APP\toDoList.txt");
 
         public void WithoutArgument()
         {
@@ -27,6 +27,11 @@ namespace TODO_APP
             {
                 Console.WriteLine("\t" + arguments[i]);
             }
+        }
+
+        public void UnsupportedArgument()
+        {
+            Console.WriteLine("Unsupported argument");
         }
 
         public void ListTasks()
@@ -42,11 +47,6 @@ namespace TODO_APP
                     Console.WriteLine((i + 1) + " - " + ToDoList[i]);
                 }
             }
-        }
-
-        public void CheckTask(int index)
-        {
-            Console.WriteLine("The task Nr. " + index + " is: " + ToDoList[index - 1]);
         }
     }
 }
